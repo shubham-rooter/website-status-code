@@ -1,14 +1,9 @@
 # website-status-code
-# scscanner_py
-scscanner_py is tool to read website status code response from the lists. This tool is reworked from bash version of [scscanner](https://github.com/yuyudhn/scscanner).
+# scanner.py
+scanner.py is tool to read website status code response from the lists. This tool is reworked from bash version of [scanner](https://github.com/shubham-rooter/website-status-code).
 
-## Requirements
-- requests
-- urllib3
-- datetime
-- argparse
 
-Tested on **Debian** with **Python 3.10.8**
+
 
 ## Features
 - Multi-threading for fast scanning.
@@ -18,9 +13,10 @@ Tested on **Debian** with **Python 3.10.8**
 ## How to use
 Help menu.
 ```
-┌──(shubham㉿Rooter)-[~/dmarcscan]
-└─$  python3 scscanner.py --help
-nino@nakano:~$ python3 scscanner.py --help
+┌──(shubham㉿Rooter)-[~/
+website-status-code ]
+└─$  python3 scanner.py --help
+
 
 ░██████╗██╗░░██╗██╗░░░██╗██████╗░██╗░░██╗░█████╗░███╗░░░███╗  ██████╗░░█████╗░░█████╗░████████╗███████╗██████╗░
 ██╔════╝██║░░██║██║░░░██║██╔══██╗██║░░██║██╔══██╗████╗░████║  ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
@@ -28,9 +24,9 @@ nino@nakano:~$ python3 scscanner.py --help
 ░╚═══██╗██╔══██║██║░░░██║██╔══██╗██╔══██║██╔══██║██║╚██╔╝██║  ██╔══██╗██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
 ██████╔╝██║░░██║╚██████╔╝██████╦╝██║░░██║██║░░██║██║░╚═╝░██║  ██║░░██║╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
 ╚═════╝░╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ╚═╝░░╚═╝░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝ 
-    scscanner - Massive HTTP Status Code Scanner
+   scanner -  HTTP Status Code Scanner
     
-usage: scscanner.py [-h] [-T list.txt] [-w [15]] [-t google.com] [-f 200] [-s] [-o result.txt]
+usage: scanner.py [-h] [-T list.txt] [-w [15]] [-t google.com] [-f 200] [-s] [-o result.txt]
 
 options:
   -h, --help            show this help message and exit
@@ -46,22 +42,22 @@ options:
 ```
 Scan domain lists.
 ```
-python3 scscanner.py -T lists.txt --workers 20
+python3 scanner.py -T lists.txt --workers 20
 ```
 Scan single domain.
 ```
-python3 scscanner.py -t https://blog.linuxsec.org
+python3 scanner.py -t https://blog.linuxsec.org
 ```
 Scan domain list with status code filtering.
 **Example**: filter only '200' response.
 ```
-python3 scscanner.py -T lists.txt -w 20 -f 200
+python3 scanner.py -T lists.txt -w 20 -f 200
 ```
 Silent option, just print url with match status code filter.
 ```
-python3 scscanner.py -T lists.txt -s --filter 200 --workers 20
+python3 scanner.py -T lists.txt -s --filter 200 --workers 20
 ```
 With save to file options.
 ```
-python3 scscanner.py -T list.txt --workers 20 --output asuka.txt
+python3 scanner.py -T list.txt --workers 20 --output asuka.txt
 ```
