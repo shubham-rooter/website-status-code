@@ -6,7 +6,7 @@ Rooterhttpscan.sh is tool to read website status code response from the lists. T
 
 
 ## Features
-- Easy to user 
+- Easy to use
 - Multi-threading for fast scanning.
 - Filter Live Domain & Dead Domain 
 
