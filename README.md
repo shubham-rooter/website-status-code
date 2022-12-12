@@ -1,14 +1,14 @@
 # website-status-code
-# scanner.py
-scanner.py is tool to read website status code response from the lists. This tool is reworked from bash version of [scanner](https://github.com/shubham-rooter/website-status-code).
+# Rooterhttpscan.sh
+Rooterhttpscan.sh is tool to read website status code response from the lists. This tool is reworked from bash version of [scanner](https://github.com/shubham-rooter/website-status-code).
 
 
 
 
 ## Features
+- Easy to user 
 - Multi-threading for fast scanning.
-- Filter status code from target list.
-- Save to file option.
+- Filter Live Domain & Dead Domain 
 
 ## Help menu
 
