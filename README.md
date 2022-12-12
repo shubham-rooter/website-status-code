@@ -10,54 +10,43 @@ scanner.py is tool to read website status code response from the lists. This too
 - Filter status code from target list.
 - Save to file option.
 
+## Help menu
+
+```
+                                                                                                                                                                                                                                            
+┌──(root㉿shadow)-[/home/rooter/Desktop/subdomain]
+└─# ./Rooterhttpscan.sh  -h          
+ ░██████╗██╗░░██╗██╗░░░██╗██████╗░██╗░░██╗░█████╗░███╗░░░███╗  ██████╗░░█████╗░░█████╗░████████╗███████╗██████╗░
+ ██╔════╝██║░░██║██║░░░██║██╔══██╗██║░░██║██╔══██╗████╗░████║  ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
+ ╚█████╗░███████║██║░░░██║██████╦╝███████║███████║██╔████╔██║  ██████╔╝██║░░██║██║░░██║░░░██║░░░█████╗░░██████╔╝
+ ░╚═══██╗██╔══██║██║░░░██║██╔══██╗██╔══██║██╔══██║██║╚██╔╝██║  ██╔══██╗██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
+ ██████╔╝██║░░██║╚██████╔╝██████╦╝██║░░██║██║░░██║██║░╚═╝░██║  ██║░░██║╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
+ ╚═════╝░╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ╚═╝░░╚═╝░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝ 
+
+ [+] by Shubham Rooter
+ [+] https://github.com/shubham-rooter
+ [+] Find alive host 
+ [-] Usage: Rooterhttpscan.sh  <Subdomainlist.txt>
+
+
+```
+
+## Installation
+```
+git clone https://github.com/shubham-rooter/website-status-code/
+cd website-status-code
+chmod +x Rooterhttpscan.sh
+./Rooterhttpscan.sh -h
+```
 ## How to use
-Help menu.
-```
-┌──(shubham㉿Rooter)-[~/
-website-status-code ]
-└─$  python3 scanner.py --help
 
+## Scan domains lists.
+```
+Rooterhttpscan.sh subdomain.txt
+```
+## FILES
+your output result are stored crunt direct in live-dead-domains folder 
+  
 
-░██████╗██╗░░██╗██╗░░░██╗██████╗░██╗░░██╗░█████╗░███╗░░░███╗  ██████╗░░█████╗░░█████╗░████████╗███████╗██████╗░
-██╔════╝██║░░██║██║░░░██║██╔══██╗██║░░██║██╔══██╗████╗░████║  ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
-╚█████╗░███████║██║░░░██║██████╦╝███████║███████║██╔████╔██║  ██████╔╝██║░░██║██║░░██║░░░██║░░░█████╗░░██████╔╝
-░╚═══██╗██╔══██║██║░░░██║██╔══██╗██╔══██║██╔══██║██║╚██╔╝██║  ██╔══██╗██║░░██║██║░░██║░░░██║░░░██╔══╝░░██╔══██╗
-██████╔╝██║░░██║╚██████╔╝██████╦╝██║░░██║██║░░██║██║░╚═╝░██║  ██║░░██║╚█████╔╝╚█████╔╝░░░██║░░░███████╗██║░░██║
-╚═════╝░╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ╚═╝░░╚═╝░╚════╝░░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝ 
-   scanner -  HTTP Status Code Scanner
-    
-usage: scanner.py [-h] [-T list.txt] [-w [15]] [-t google.com] [-f 200] [-s] [-o result.txt]
-
-options:
-  -h, --help            show this help message and exit
-  -T list.txt           File contain lists of domain
-  -w [15], --workers [15]
-                        Thread value. Default value is 4
-  -t google.com, --target google.com
-                        Single domain check
-  -f 200, --filter 200  Status code filter
-  -s, --silent          Silent mode option. Don't print status code output
-  -o result.txt, --output result.txt
-                        Save the results to file
-```
-Scan domain lists.
-```
-python3 scanner.py -T lists.txt --workers 20
-```
-Scan single domain.
-```
-python3 scanner.py -t https://blog.linuxsec.org
-```
-Scan domain list with status code filtering.
-**Example**: filter only '200' response.
-```
-python3 scanner.py -T lists.txt -w 20 -f 200
-```
-Silent option, just print url with match status code filter.
-```
-python3 scanner.py -T lists.txt -s --filter 200 --workers 20
-```
-With save to file options.
-```
-python3 scanner.py -T list.txt --workers 20 --output asuka.txt
-```
+## PREVIEW
+![image](https://user-images.githubusercontent.com/94091556/207166203-406d1af4-33fa-4ee7-8d0d-45abf7a7fb36.png)
